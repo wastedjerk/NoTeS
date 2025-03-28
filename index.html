@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notizen-App</title>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <header>
+      <h1>NoTeS</h1>
+      <div id="status" class="online">Online</div>
+      <div id="toggle-container">
+        <label for="cache-toggle">Caching aktivieren:</label>
+        <input
+          type="checkbox"
+          id="cache-toggle"
+          onchange="toggleDynamicCaching(this.checked)"
+        />
+      </div>
+    </header>
+    <main>
+      <div id="fakeCat">
+        <div>/|、</div>
+        <div>&nbsp;(˚ˎ 。7</div>
+        <div>&nbsp;&nbsp;|、˜ 〵</div>
+        <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;じし___)ノ</div>
+      </div>
+      <button onclick="loadNewContent()">? prefer a real cat ¿</button>
+      <form id="noteForm">
+        <textarea
+          id="noteInput"
+          placeholder="Notiz hier eingeben..."
+        ></textarea>
+        <button type="submit">Notiz hinzufügen</button>
+      </form>
+      <section id="notesList"></section>
+      <button id="loadImages">Analyse</button>
+      <div
+        id="imagesContainer"
+        style="display: flex; flex-wrap: wrap; justify-content: space-between"
+      ></div>
+    </main>
+    <script src="js/app.js"></script>
+  </body>
+</html>
